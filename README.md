@@ -1,7 +1,9 @@
 ﻿# My Python Repository
+
 Repository for my python examples
 
-## Getting pandas to work in Visual Studio Core
-py -m pip install --upgrade pip
+## Getting pandas to work in Visual Studio Code
 
-py -m pip install pandas
+`py -m pip install --upgrade pip`
+
+`py -m pip install pandas`
