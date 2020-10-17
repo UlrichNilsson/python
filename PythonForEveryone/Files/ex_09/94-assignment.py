@@ -12,10 +12,16 @@ handle = open(name)
 
 for line in handle:
     if(line.startswith("From") and not line.startswith("From:")):
-        print(line.split()[1])
+        #print(line.split()[1])
         counts[line.split()[1]]=counts.get(line.split()[1],0)+1
 
-print(counts)
+#print(counts)
 
 bigcount=None
-bigcount=None
+bigword=None
+
+for word,count in counts.items():
+    if bigcount is None or count>bigcount:
+        bigword=word
+        bigcount=count
+print(bigword,bigcount)
