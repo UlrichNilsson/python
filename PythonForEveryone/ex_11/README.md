@@ -16,3 +16,5 @@
 |[a-z0-9]| The set of characters can include a range              |
 |(       | Indicates where string extraction is to start          |
 |)       | Indicates where string extraction is to end            |
+
+For more information about using regular expressions in Python, see <https://docs.python.org/3/howto/regex.html>
