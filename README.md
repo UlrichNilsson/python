@@ -12,3 +12,7 @@ Repository for my python examples
 `python3 -m pip install pandas`
 `python3 -m pip install matplotlib`
 `python3 -m pip install numpy`
+
+### Beautiful soup
+
+`python3 -m pip install beautifulsoup4`
