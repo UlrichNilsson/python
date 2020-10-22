@@ -2,8 +2,10 @@
 import urllib.request, urllib.parse, urllib.error
 from bs4 import BeautifulSoup
 import ssl
+import re
 
 def getsoup(url):
+    print(url)
     # Ignore SSL certificate errors
     ctx = ssl.create_default_context()
     ctx.check_hostname = False
@@ -17,14 +19,16 @@ def getsoup(url):
 
 countto=4
 count=0
-positionto=3
+positionto=2
 position=0
-
-for tag in getsoup('http://py4e-data.dr-chuck.net/known_by_Fikret.html'):
-    print(count,countto)
-    if countto==count:
-        print(tag.get('href', None))
-        #for tag2 in getsoup(tag.get('href', None)):
-        #    print(' -> ',tag2.get('href', None))
-    else:
-        count=count+1
+url='http://py4e-data.dr-chuck.net/known_by_Fikret.html'
+while(count<countto):
+    for tag in getsoup(url):
+        if position==positionto:
+            url=re.findall('"(\S+)"',tag.decode())[0]
+            print(url)
+            position=position+1
+            continue
+        else:
+            position=position+1
+    count=count+1
