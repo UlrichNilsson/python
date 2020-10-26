@@ -1,6 +1,9 @@
 import urllib.request, urllib.parse, urllib.error
 import json
 
+# API key
+#https://cloud.google.com/maps-platform/user-guide/account-changes/#no-plan
+
 serviceurl='http://maps.googleapis.com/maps/api/geocode/json?'
 
 while True:
