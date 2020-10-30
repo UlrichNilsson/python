@@ -19,5 +19,6 @@ conn.commit()
 sqlstr='select * from Users'
 for row in cur.execute(sqlstr):
     print(row[0],row[1])
+cur.close()
 conn.close()
 
