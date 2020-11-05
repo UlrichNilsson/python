@@ -1,2 +1,2 @@
-print(ord('H'))
+print(ord('l'))
 print(ord('\n'))
